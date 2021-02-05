@@ -1,6 +1,6 @@
 {
-    "name": "yjtec/laravel-makerepo",
-    "description": "laravel make repoi",
+    "name": "yjtec/laravel-repository",
+    "description": "laravel repository",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -14,12 +14,6 @@
      "autoload": {
         "psr-4": {
             "Yjtec\\Repo\\":"src/"
-        }
-    },
-    "repositories": {
-        "packagist": {
-            "type": "composer",
-            "url": "https://packagist.laravel-china.org"
         }
     },
     "extra": {
