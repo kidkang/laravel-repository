@@ -15,26 +15,27 @@ class RepoServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                RepoiMakeCommand::class,
+                RepoIMakeCommand::class,
                 RepoMakeCommand::class,
             ]);
         }
 
         $this->makeInterface();
-        
+
     }
 
-    private function makeInterface(){
+    private function makeInterface()
+    {
 
         $path = app_path('Repositories/Contracts');
         $files = scandir($path);
         //roleInterface.php
-        foreach($files as $file){
-            if(preg_match("/(.*?)Interface\.php/i", $file,$match)){
+        foreach ($files as $file) {
+            if (preg_match("/(.*?)Interface\.php/i", $file, $match)) {
                 $fileName = $match[1];
                 $this->app->bind(
-                    'App\Repositories\Contracts\\'.$fileName.'Interface',
-                    'App\Repositories\Eloquent\\'.$fileName.'Repository'
+                    'App\Repositories\Contracts\\' . $fileName . 'Interface',
+                    'App\Repositories\Eloquent\\' . $fileName . 'Repository'
                 );
             }
         }
