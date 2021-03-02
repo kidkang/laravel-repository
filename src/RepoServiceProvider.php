@@ -2,6 +2,7 @@
 
 namespace Yjtec\Repo;
 
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
 
 class RepoServiceProvider extends ServiceProvider
@@ -11,7 +12,7 @@ class RepoServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(Filesystem $filesystem)
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
@@ -20,23 +21,25 @@ class RepoServiceProvider extends ServiceProvider
             ]);
         }
 
-        $this->makeInterface();
+        $this->makeInterface($filesystem);
 
     }
 
-    private function makeInterface()
+    private function makeInterface($filesystem)
     {
 
         $path = app_path('Repositories/Contracts');
-        $files = scandir($path);
-        //roleInterface.php
-        foreach ($files as $file) {
-            if (preg_match("/(.*?)Interface\.php/i", $file, $match)) {
-                $fileName = $match[1];
-                $this->app->bind(
-                    'App\Repositories\Contracts\\' . $fileName . 'Interface',
-                    'App\Repositories\Eloquent\\' . $fileName . 'Repository'
-                );
+
+        if (is_dir($path)) {
+            $files = scandir($path);
+            foreach ($files as $file) {
+                if (preg_match("/(.*?)Interface\.php/i", $file, $match)) {
+                    $fileName = $match[1];
+                    $this->app->bind(
+                        'App\Repositories\Contracts\\' . $fileName . 'Interface',
+                        'App\Repositories\Eloquent\\' . $fileName . 'Repository'
+                    );
+                }
             }
         }
     }
