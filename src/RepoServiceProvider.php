@@ -17,6 +17,7 @@ class RepoServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 Commands\MakeCommand::class,
+                Commands\PublishCommand::class,
             ]);
         }
         $this->app->make(RepoManifest::class)->bind();

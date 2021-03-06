@@ -4,7 +4,7 @@
  * @Author: kidkang
  * @Date:   2021-03-07 00:32:59
  * @Last Modified by:   kidkang
- * @Last Modified time: 2021-03-07 02:30:45
+ * @Last Modified time: 2021-03-07 02:47:28
  */
 namespace Yjtec\Repo;
 
@@ -66,7 +66,7 @@ class RepoManifest
 
     protected function getManifestPath()
     {
-        return dirname($this->app->getCachedServicesPath()) . DIRECTORY_SEPARATOR . 'repo.php';
+        return dirname($this->app->getCachedServicesPath()) . DIRECTORY_SEPARATOR . 'repositories.php';
     }
 
     /**

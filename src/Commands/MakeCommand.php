@@ -4,7 +4,7 @@
  * @Author: kidkang
  * @Date:   2021-03-06 17:10:10
  * @Last Modified by:   kidkang
- * @Last Modified time: 2021-03-07 02:34:10
+ * @Last Modified time: 2021-03-07 02:45:19
  */
 
 namespace Yjtec\Repo\Commands;
@@ -12,7 +12,6 @@ namespace Yjtec\Repo\Commands;
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputOption;
-use Yjtec\Repo\RepoManifest;
 
 class MakeCommand extends GeneratorCommand
 {
@@ -60,7 +59,7 @@ class MakeCommand extends GeneratorCommand
             $this->call('make:rep', ['name' => $name, '--a' => true]); //create abstract
         }
 
-        $this->laravel->make(RepoManifest::class)->build();
+        $this->call('rep:publish');
 
     }
 

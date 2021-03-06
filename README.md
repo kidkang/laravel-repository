@@ -1,6 +1,6 @@
-#命令
+#1.命令
 
-## 1.php artisan make:rep name --options
+## 1.1php artisan make:rep name --options
 
 >默认生成 repository interface abstract
 
@@ -24,6 +24,8 @@ php artisan make:rep --r; //生成repository
 php artisan make:rep --m; //生成model
 
 ```
+##1.2 php artisan rep:publish
+> 如果手动创建repositories 当中的文件，请手动进行发布文件，不然会报错
 
 
 
