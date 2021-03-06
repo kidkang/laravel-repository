@@ -12,34 +12,24 @@ class RepoServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot(Filesystem $filesystem)
+    public function boot()
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
                 Commands\MakeCommand::class,
             ]);
         }
-
-        $this->makeInterface($filesystem);
+        $this->app->make(RepoManifest::class)->bind();
 
     }
 
-    private function makeInterface($filesystem)
+    public function register()
     {
-
-        $path = app_path('Repositories/Contracts');
-
-        if (is_dir($path)) {
-            $files = scandir($path);
-            foreach ($files as $file) {
-                if (preg_match("/(.*?)Interface\.php/i", $file, $match)) {
-                    $fileName = $match[1];
-                    $this->app->bind(
-                        'App\Repositories\Contracts\\' . $fileName . 'Interface',
-                        'App\Repositories\Eloquent\\' . $fileName . 'Repository'
-                    );
-                }
-            }
-        }
+        $this->app->singleton(RepoManifest::class, function ($app) {
+            return new RepoManifest(
+                $app, new Filesystem, app_path('Repositories')
+            );
+        });
     }
+
 }
