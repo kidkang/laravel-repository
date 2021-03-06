@@ -1,0 +1,20 @@
+<?php
+namespace {{ namespace }};
+
+use App\Models\{{class}};
+use App\Repositories\Contracts\{{ class }}Interface;
+use Yjtec\Repo\Repository;
+class {{class}}Repository extends Repository implements {{ class }}Interface
+{
+    
+    /**
+     * Specify Model class name
+     * 
+     * @return string
+     */
+    public function model()
+    {
+        // TODO: Implement model() method.
+        return {{class}}::class;
+    }
+}

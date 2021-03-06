@@ -1,0 +1,9 @@
+<?php
+namespace {{ namespace }};
+
+use Yjtec\Repo\Repository;
+
+abstract class {{ class }} extends Repository
+{
+    //
+}

@@ -16,8 +16,7 @@ class RepoServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                RepoIMakeCommand::class,
-                RepoMakeCommand::class,
+                Commands\MakeCommand::class,
             ]);
         }
 
