@@ -1,39 +1,30 @@
 #命令
 
-## 1.创建interface命令
+## 1.php artisan make:rep name --options
 
-``` 
-php artisan make:repoi TestInterface
+>默认生成 repository interface abstract
+
+|参数|可选|备注|
+|:--:|:--:|:--
+|name|是|要生成文件的名字
+|option|否|
+|--i||生成Interface
+|--a||生成abstract
+|--r||生成Repository
+|--ra||生成继承abstract的Repository
+|--ri 或者--ir||生成repository和interface（之前的设计模式）
+|--m||生成上述文件的通时，生成model文件
+|--mf||生成上述文件的同时，生成model和factory文件
+
+###例子：
+
+```
+php artisan make:rep;
+php artisan make:rep --r; //生成repository
+php artisan make:rep --m; //生成model
+
 ```
 
-生成TestInterface文件
-
-### 参数 -r
-```
-php artisan make:repoi TestInterface -r
-```
-同时生成 TestRepository文件
-
-## 2.生成repository文件
-
-```
-php artisan make:repo TestRepository
-```
-生成repository文件
-
-### 参数 -m modelname 
-```
-php artisan make:repo TestRepository -m TestModel
-```
-
-指定model的名称，不能包含model的路径
-
-### 参数 -i test
-```
-php artisan make:repo TestRepository -i Test
-```
-
-指定interface为testInterface
 
 
 # 基类() Repository方法
@@ -61,4 +52,6 @@ php artisan make:repo TestRepository -i Test
 
 ## 1.6 list($where)
 > 查找符合条件的数据 返回全部
+
+
 
