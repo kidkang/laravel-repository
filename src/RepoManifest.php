@@ -4,7 +4,7 @@
  * @Author: kidkang
  * @Date:   2021-03-07 00:32:59
  * @Last Modified by:   kidkang
- * @Last Modified time: 2021-03-07 02:47:28
+ * @Last Modified time: 2021-03-07 10:04:04
  */
 namespace Yjtec\Repo;
 
@@ -99,9 +99,11 @@ class RepoManifest
 
     public function build()
     {
-        $abstractRepo = $this->getAbstractRepo();
-        $interfaceRepo = $this->getInterfaceRepo();
-        $this->write($abstractRepo + $interfaceRepo);
+        if (!empty($repo = $this->getAbstractRepo() +
+            $this->getInterfaceRepo())) {
+            $this->write($repo);
+        }
+
     }
     protected function getInterfaceRepo()
     {
@@ -114,6 +116,8 @@ class RepoManifest
                 return $this->formatInterface($item['name']);
             })->all();
         }
+
+        return [];
     }
     protected function getAbstractRepo()
     {

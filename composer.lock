@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d789d63251b39d5424c52240cd054f21",
+    "content-hash": "62fcf362d636c9e08964b55f5f47589b",
     "packages": [],
     "packages-dev": [
         {
@@ -653,12 +653,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "94c23859c9aa636861c2e2d296858474f7f405e3"
+                "reference": "31b3242dad97eb17527f75b577711321e2318fd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/94c23859c9aa636861c2e2d296858474f7f405e3",
-                "reference": "94c23859c9aa636861c2e2d296858474f7f405e3",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/31b3242dad97eb17527f75b577711321e2318fd1",
+                "reference": "31b3242dad97eb17527f75b577711321e2318fd1",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -820,7 +820,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-03-02T00:09:48+00:00"
+            "time": "2021-03-06T03:14:49+00:00"
         },
         {
             "name": "league/commonmark",
@@ -1649,12 +1649,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench-core.git",
-                "reference": "c0297f31b95ba6e0f0e96d3c67d882d30680c83d"
+                "reference": "e440e5ede44ac92a26229d6ad54e3c5934205b59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/c0297f31b95ba6e0f0e96d3c67d882d30680c83d",
-                "reference": "c0297f31b95ba6e0f0e96d3c67d882d30680c83d",
+                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/e440e5ede44ac92a26229d6ad54e3c5934205b59",
+                "reference": "e440e5ede44ac92a26229d6ad54e3c5934205b59",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1738,7 +1738,7 @@
                     "type": "liberapay"
                 }
             ],
-            "time": "2021-02-21T04:20:45+00:00"
+            "time": "2021-03-05T01:09:17+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -2655,16 +2655,16 @@
         },
         {
             "name": "psr/container",
-            "version": "dev-master",
+            "version": "1.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "381524e8568e07f31d504a945b88556548c8c42e"
+                "reference": "8622567409010282b7aeebe4bb841fe98b58dcaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/381524e8568e07f31d504a945b88556548c8c42e",
-                "reference": "381524e8568e07f31d504a945b88556548c8c42e",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/8622567409010282b7aeebe4bb841fe98b58dcaf",
+                "reference": "8622567409010282b7aeebe4bb841fe98b58dcaf",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2676,13 +2676,7 @@
             "require": {
                 "php": ">=7.2.0"
             },
-            "default-branch": true,
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Psr\\Container\\": "src/"
@@ -2709,9 +2703,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/master"
+                "source": "https://github.com/php-fig/container/tree/1.1.x"
             },
-            "time": "2020-10-13T07:07:53+00:00"
+            "time": "2021-03-05T17:36:06+00:00"
         },
         {
             "name": "psr/event-dispatcher",
@@ -2778,12 +2772,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "dd738d0b4491f32725492cf345f6b501f5922fec"
+                "reference": "a18c1e692e02b84abbafe4856c3cd7cc6903908c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/dd738d0b4491f32725492cf345f6b501f5922fec",
-                "reference": "dd738d0b4491f32725492cf345f6b501f5922fec",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/a18c1e692e02b84abbafe4856c3cd7cc6903908c",
+                "reference": "a18c1e692e02b84abbafe4856c3cd7cc6903908c",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2827,7 +2821,7 @@
             "support": {
                 "source": "https://github.com/php-fig/log/tree/master"
             },
-            "time": "2020-09-18T06:44:51+00:00"
+            "time": "2021-03-02T15:02:34+00:00"
         },
         {
             "name": "psr/simple-cache",
@@ -4149,12 +4143,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "423b5d96ea1804dcf05436a3e34ec8dbf57b07e0"
+                "reference": "2c56a7f54e322f7d001d0ab9f28b0c7254ac87fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/423b5d96ea1804dcf05436a3e34ec8dbf57b07e0",
-                "reference": "423b5d96ea1804dcf05436a3e34ec8dbf57b07e0",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/2c56a7f54e322f7d001d0ab9f28b0c7254ac87fc",
+                "reference": "2c56a7f54e322f7d001d0ab9f28b0c7254ac87fc",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -4223,7 +4217,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-31T18:42:25+00:00"
+            "time": "2021-03-05T12:09:23+00:00"
         },
         {
             "name": "symfony/console",
@@ -4231,12 +4225,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "c08d7d0d458eceb62996d81d3be8d9fbf5564ec4"
+                "reference": "92e1b7c4381c3c51e327b99c7ff067411e291783"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/c08d7d0d458eceb62996d81d3be8d9fbf5564ec4",
-                "reference": "c08d7d0d458eceb62996d81d3be8d9fbf5564ec4",
+                "url": "https://api.github.com/repos/symfony/console/zipball/92e1b7c4381c3c51e327b99c7ff067411e291783",
+                "reference": "92e1b7c4381c3c51e327b99c7ff067411e291783",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -4327,7 +4321,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-23T10:10:15+00:00"
+            "time": "2021-03-06T13:50:37+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -4779,7 +4773,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/5.x"
+                "source": "https://github.com/symfony/finder/tree/v5.2.4"
             },
             "funding": [
                 {
@@ -5152,7 +5146,7 @@
                 "mime-type"
             ],
             "support": {
-                "source": "https://github.com/symfony/mime/tree/5.x"
+                "source": "https://github.com/symfony/mime/tree/v5.2.4"
             },
             "funding": [
                 {
@@ -6135,12 +6129,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "e830e6ceebd6377b019e4c9a523d6f2c27007e4a"
+                "reference": "96cd360b9f03a22a30cf5354e630c557bd3aac33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/e830e6ceebd6377b019e4c9a523d6f2c27007e4a",
-                "reference": "e830e6ceebd6377b019e4c9a523d6f2c27007e4a",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/96cd360b9f03a22a30cf5354e630c557bd3aac33",
+                "reference": "96cd360b9f03a22a30cf5354e630c557bd3aac33",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -6151,7 +6145,7 @@
             },
             "require": {
                 "php": ">=7.2.5",
-                "psr/container": "^1.0"
+                "psr/container": "^1.1"
             },
             "suggest": {
                 "symfony/service-implementation": ""
@@ -6213,7 +6207,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-25T16:38:04+00:00"
+            "time": "2021-03-05T22:51:52+00:00"
         },
         {
             "name": "symfony/string",
@@ -6311,12 +6305,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "84f3e8172eee0a97ba3506e30233472fb415d8c4"
+                "reference": "1df60f0debacffeead546abb2bc8857960f757bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/84f3e8172eee0a97ba3506e30233472fb415d8c4",
-                "reference": "84f3e8172eee0a97ba3506e30233472fb415d8c4",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/1df60f0debacffeead546abb2bc8857960f757bf",
+                "reference": "1df60f0debacffeead546abb2bc8857960f757bf",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -6403,7 +6397,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-25T13:42:49+00:00"
+            "time": "2021-03-04T15:41:30+00:00"
         },
         {
             "name": "symfony/translation-contracts",
@@ -6496,12 +6490,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "898d0e3b20171d9178c0fcd058a76b5698cc804e"
+                "reference": "8de3852aa0f9ab442cc6d5679062f7a192196082"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/898d0e3b20171d9178c0fcd058a76b5698cc804e",
-                "reference": "898d0e3b20171d9178c0fcd058a76b5698cc804e",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/8de3852aa0f9ab442cc6d5679062f7a192196082",
+                "reference": "8de3852aa0f9ab442cc6d5679062f7a192196082",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -6583,7 +6577,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-02-18T23:11:25+00:00"
+            "time": "2021-03-06T08:05:19+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -7021,7 +7015,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^7.2|^8.0"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
 }
