@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 abstract class Repository
 {
+    use DBTrait;
     protected $app; //App容器
     protected $model; //操作的model
     public $ErrorCode; //错误码
@@ -45,7 +46,7 @@ abstract class Repository
         return $this->model->paginate($page);
     }
 
-    public function list($where){
+    function list($where) {
         return $this->model->where($where)->get();
     }
     public function add($data)
