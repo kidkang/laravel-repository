@@ -4,7 +4,7 @@
  * @Author: kidkang
  * @Date:   2021-03-08 11:34:36
  * @Last Modified by:   kidkang
- * @Last Modified time: 2021-03-08 11:36:28
+ * @Last Modified time: 2021-03-10 19:49:40
  */
 namespace Yjtec\Repo;
 
@@ -29,5 +29,15 @@ trait DBTrait
     public function transaction($callback)
     {
         DB::transaction($callback);
+    }
+
+    public function debug()
+    {
+        DB::connection()->enableQueryLog();
+    }
+
+    public function sql()
+    {
+        return DB::getQueryLog();
     }
 }

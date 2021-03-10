@@ -3,6 +3,7 @@ namespace Yjtec\Repo;
 
 use Illuminate\Container\Container as App;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Validator;
 
 abstract class Repository
 {
@@ -18,6 +19,15 @@ abstract class Repository
     }
 
     abstract public function model();
+
+    public function validate($data = [], $rules = [])
+    {
+        $validator = Validator::make($data, $rules);
+        if ($validator->fails()) {
+            throw new RuntimeException($validator->errors()->first());
+        }
+        return $validator->validated();
+    }
 
     public function findBy($id)
     {
