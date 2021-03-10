@@ -4,7 +4,7 @@
  * @Author: kidkang
  * @Date:   2021-03-06 17:10:10
  * @Last Modified by:   kidkang
- * @Last Modified time: 2021-03-07 02:45:19
+ * @Last Modified time: 2021-03-10 11:36:39
  */
 
 namespace Yjtec\Repo\Commands;
@@ -42,10 +42,16 @@ class MakeCommand extends GeneratorCommand
         $name = $this->getNameInput('name');
         if ($this->option("mf")) {
             $this->call('make:model', ['name' => $name, '-f' => true]);
+            if ($this->option('t')) {
+                $this->makeTest($name, '--model');
+            }
         }
 
         if ($this->option('m')) {
             $this->call('make:model', ['name' => $name]);
+            if ($this->option('t')) {
+                $this->makeTest($name, '--model');
+            }
         }
 
         if ($this->option('i') || $this->option('r') || $this->option('ra') || $this->option('a')) {
@@ -54,13 +60,24 @@ class MakeCommand extends GeneratorCommand
             $this->call('make:rep', ['name' => $name, '--i' => true]); //create interface
             $this->call('make:rep', ['name' => $name, '--r' => true]); //create abstract
         } else {
+            if ($this->option('t')) {
+                $this->makeTest($name, '--repository');
+            }
             $this->call('make:rep', ['name' => $name, '--ra' => true]); //create repository extends abstract
             $this->call('make:rep', ['name' => $name, '--i' => true]); //create interface
             $this->call('make:rep', ['name' => $name, '--a' => true]); //create abstract
+
         }
 
         $this->call('rep:publish');
 
+    }
+
+    protected function makeTest($name, $type)
+    {
+        if (class_exists(\Yjtec\PHPUnit\ServiceProvider::class)) {
+            $this->call('make:testy', ['name' => $name . 'Test', $type => true]);
+        }
     }
 
     protected function getStub()
@@ -144,6 +161,7 @@ class MakeCommand extends GeneratorCommand
             ['ir', 'interfaceandrepository', InputOption::VALUE_NONE, 'Create a interface and repository.'],
             ['mf', 'modelandfactory', InputOption::VALUE_NONE, 'Create a repository and model and factory'],
             ['m', 'model', InputOption::VALUE_NONE, 'Create a repository and model'],
+            ['t', 'test', InputOption::VALUE_NONE, 'Create a repository or model with test'],
         ];
     }
 

@@ -15,15 +15,74 @@
 |--ri 或者--ir||生成repository和interface（之前的设计模式）
 |--m||生成上述文件的通时，生成model文件
 |--mf||生成上述文件的同时，生成model和factory文件
+|--t||生成上述文件的同时，生成test文件
 
 ###例子：
+```
+php artisan make:rep User;
 
 ```
-php artisan make:rep;
-php artisan make:rep --r; //生成repository
-php artisan make:rep --m; //生成model
+>生成以下文件
+
+1. app/Repositories/User.php 
+2. app/Repositories/Contracts/UserInterface.php
+3. app/Repositories/Eloquent/UserRepository.php
 
 ```
+php artisan make:rep --r; 
+```
+>生成以下文件
+
+1.app/Repositories/Eloquent/UserRepository.php
+
+
+```
+php artisan make:rep --a; 
+```
+>生成以下文件
+
+1.app/Repositories/User.php
+
+```
+php artisan make:rep --i;
+```
+>生成以下文件
+
+1. app/Repositories/Contracts/UserInterface.php
+
+```
+php artisan make:rep User --m;
+
+```
+> 生成以下文件
+
+1. app/Repositories/User.php 
+2. app/Repositories/Contracts/UserInterface.php
+3. app/Repositories/Eloquent/UserRepository.php
+4. app/Models/User
+
+```
+php artisan make:rep Test --t; 
+```
+>生成以下文件
+
+1. app/Repositories/User.php 
+2. app/Repositories/Contracts/UserInterface.php
+3. app/Repositories/Eloquent/UserRepository.php
+4. test/Repositories/UserTest.php
+
+```
+php artisan make:rep Test --mf --t; 
+```
+>生成以下文件
+
+1. app/Repositories/User.php 
+2. app/Repositories/Contracts/UserInterface.php
+3. app/Repositories/Eloquent/UserRepository.php
+4. test/Repositories/UserTest.php
+5. test/Models/UserTest.php
+6. database/factories/UserFactory.php
+
 ##1.2 php artisan rep:publish
 > 如果手动创建repositories 当中的文件，请手动进行发布文件，不然会报错
 
