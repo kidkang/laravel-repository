@@ -4,6 +4,7 @@ namespace Yjtec\Repo;
 use Illuminate\Container\Container as App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Validator;
+use RuntimeException;
 
 abstract class Repository
 {
