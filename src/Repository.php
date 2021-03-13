@@ -23,7 +23,15 @@ abstract class Repository
 
     public function validate($data = [], $rules = [])
     {
+        if (is_string($rules) && class_exists($rules)) {
+
+            if (property_exists($rules, 'hasValidated') && $rules::$hasValidated) {
+                return $data;
+            }
+            $rules = (new $rules)->rules();
+        }
         $validator = Validator::make($data, $rules);
+
         if ($validator->fails()) {
             throw new RuntimeException($validator->errors()->first());
         }
